@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "django-api-rest-framework"
+version = "0.1.0"
+description = ""
+authors = ["ledsouza <leandro.souza.159@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+Django = "^5.0.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
