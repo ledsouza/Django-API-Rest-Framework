@@ -30,3 +30,11 @@ class ListaMatriculasAlunoSerializer(serializers.ModelSerializer):
 
     def get_periodo(self, object):
         return object.get_periodo_display()
+
+
+class ListaAlunosMatriculadosSerializer(serializers.ModelSerializer):
+    aluno_nome = serializers.ReadOnlyField(source="aluno.nome")
+
+    class Meta:
+        model = Matricula
+        fields = ['aluno_nome']
