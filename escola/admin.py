@@ -1,5 +1,5 @@
 from django.contrib import admin
-from escola.models import Aluno, Curso
+from escola.models import Aluno, Curso, Matricula
 
 
 @admin.register(Aluno)
@@ -15,3 +15,9 @@ class CursoAdmin(admin.ModelAdmin):
     list_display = ('id', 'codigo_curso', 'descricao')
     list_display_links = ('id', 'codigo_curso')
     search_fields = ('codigo_curso',)
+
+
+@admin.register(Matricula)
+class MatriculaAdmin(admin.ModelAdmin):
+    list_display = ('id', 'aluno', 'curso', 'periodo')
+    list_display_links = ('id',)
